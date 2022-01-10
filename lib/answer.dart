@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
-class Answere extends StatelessWidget {
+class Answer extends StatelessWidget {
   final VoidCallback selectHandler;
-  final String answere;
+  final String answerText;
 
-  Answere(this.selectHandler, this.answere);
+  Answer(this.selectHandler, this.answerText);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       child: RaisedButton(
-        child: Text(answere),
-        color: Colors.cyan[200],
+        color: Colors.blue,
+        textColor: Colors.white,
+        child: Text(answerText),
         onPressed: selectHandler,
       ),
     );
